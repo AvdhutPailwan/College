@@ -33,7 +33,7 @@ int main()
         j++;
     }
     stuffed[j]='\0';// to locate end of string in stuffed
-    printf("The stuffed code : %s\n",stuffed);
+    printf("The stuffed code : 01111110%s01111110\n",stuffed);
     free(mem);
     free(stuffed);
 // ---------------------------------------------------------------------------------
@@ -45,8 +45,8 @@ int main()
     int len2 = strlen(rec);
     rec = realloc(rec,len2*sizeof(char));
     char* destuff = malloc(sizeof(rec));
-    count = 0,j=0;
-    for(i = 0; i<(len2); i++){
+    count = 0,j=8;
+    for(i = 0; i<(len2) && j<len2-8; i++){
         if(count == 5){
             j++;
             count==0;
