@@ -15,7 +15,6 @@ int main()
     jump = a;
     ch = a+sizeof(int);
     scanf("%[^\n]%*c", ch);
-    printf("Given string is : %s\n", ch);
     *jump = strl(ch);
     a=realloc(a,((*jump)*sizeof(char))+sizeof(int));
     for(int i = 0; i<*jump; i++){
@@ -24,13 +23,16 @@ int main()
             for(int j = i; j<*jump; j++){
                 count++;
                 if(ch[j]==' '|| j==*jump-1){
-                    printf("\n%-6d",count);
+                    printf("%d",count);
                     break;
                 }
             }
         }
-        printf("%c",ch[i]);
+        if(ch[i]!=' '){
+            printf("%c",ch[i]);
+        }
     }
+    printf("\n%s\n", ch);
     free(a);
     return 0;
 }
