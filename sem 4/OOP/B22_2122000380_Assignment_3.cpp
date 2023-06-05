@@ -28,13 +28,13 @@ class Person{
 
 int main()
 {
-	int i, j, size, id;
-	i=j=size=0;
+	int i, j, id;
+	i=j=0;
 	
 	string name;
 	
 	
-	Person obj[20];
+	Person *obj[20];
 	
 	
 	bool flag = true;
@@ -47,22 +47,21 @@ int main()
 		switch(op)
 		{
 		case 1:
-			if(size >19)
+			if(i >19)
 			{
 				cout<<"storage full!"<<endl;
 			}else{
 				cout<<"Enter id and name :"<<endl;
 				cin>>id>>name;
-				obj[i++] = Person(id,name);
-				size++;
+				obj[i++] =new Person(id,name);
 			}
 			break;
 		case 2:
-			if(!size){
+			if(!i){
 				cout<<"No object is created"<<endl;
 			}else{
-				for(j = 0; j<size; j++){
-					cout<<"\n"<<obj[j].toString().str()<<endl;
+				for(j = 0; j<i; j++){
+					cout<<"\n"<<obj[j]->toString().str()<<endl;
 				}
 			}
 		
@@ -71,6 +70,10 @@ int main()
 			flag = false;
 			break;
 		}
+	}
+
+	for(int j = 0; j<i; j++){
+		delete(obj[j]);
 	}
 	return 0;
 }
