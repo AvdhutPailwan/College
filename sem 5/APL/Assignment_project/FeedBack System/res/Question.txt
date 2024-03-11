@@ -1,0 +1,5 @@
+Rate the overall quality of the product.
+How satisfied are you with the product's performance?
+Rate the ease of setting up and using the product.
+How durable do you perceive the product to be?
+Rate the product in terms of its value for the price paid.

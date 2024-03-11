@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="outer-box">
+        <div id="toggle-button">
+            <a href="/users"><button>See Users</button></a>
+        </div>
+        <div class="inner-box">
+            <header class="signup-header" >
+                <h1>Registeration Form</h1>
+                <p>hardly takes a minute</p>
+            </header>
+            <main class="signup-body">
+                <form id="user-form" action="/register" method="post">
+                    <p>
+                        <label for="name">
+                            Name<span class="red">*</span> :
+                        </label>
+                        <input type="text" name="name" id="name" placeholder="Enter your Full Name" required>
+                    </p>
+                    <p>
+                        <label for="email">
+                            email<span class="red">*</span> :
+                        </label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    </p>
+                    <p>
+                        <label for="password">
+                            Password<span class="red">*</span> :
+                        </label>
+                        <input type="password" name="password" id="password" placeholder="Enter your Password" required>
+                    </p>
+                    <p>
+                        <label for="dob">Date of Birth<span class="red">*</span> :</label>
+                        <input type="date" name="dob" id="dob" required>
+                    </p>
+                    <p>
+                        <label for="mobileNumber">Mobile Number<span class="red">*</span> :</label>
+                        <input type="number" name="mobileNumber" id="mobileNumber" required>
+                    </p>
+                    <p class="submit">  
+                        <button type="submit" id="submit">submit</button>
+                    </p>
+                </form>
+            </main>
+        </div>
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+    </div>
+
+</body>
+
+</html>
